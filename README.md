@@ -1,14 +1,8 @@
-==================================================
-=                                                =
-=                    SBIEMLAB                    = 
-=  a Spectral Boundary Integral Equation Method  =
-=   for 2D mode III rupture dynamics in Matlab   =
-=                   Version 0.1                  =
-=                                                =
-=                Jean-Paul Ampuero               =
-=              ampuero@geoazur.unice.fr	         =
-=                                                =
-==================================================
+SBIEMLAB
+a Spectral Boundary Integral Equation Method 
+for 2D mode III rupture dynamics in Matlab
+
+Version 0.1
 
 
 CONTENTS
@@ -24,13 +18,13 @@ CONTENTS
 I. DIRECTORY CONTENTS
 ----------------------
 
-README		the current file
-GNU_GPL		GNU General Public License
-SBIEM*jpg	example output figures
-src/SBIEM.m	the SBIEM solver
-src/friction.m	slip weakening friction laws
-src/SBIEM_ex*.m	examples (1 to 3)
-src/speed.m	estimates front speed
+. README		the current file
+. GNU_GPL		GNU General Public License
+. SBIEM*jpg	example output figures
+. src/SBIEM.m	the SBIEM solver
+. src/friction.m	slip weakening friction laws
+. src/SBIEM_ex*.m	examples (1 to 3)
+. src/speed.m	estimates front speed
 
 The function SBIEM creates and maintains a directory called 'kernels', 
 in which some numerical coefficient tables are stored to avoid 
@@ -74,9 +68,8 @@ SBIEMLAB is intended to introduce new users to the SBIEM or
 to introduce researchers and students to computational earthquake dynamics.
 For serious simulations you should turn to an optimized Fortran 
 implementation of the SBIEM or of the Spectral Element Method (SEM):
-  + BIMAT-PCSI, http://www.sg.geophys.ethz.ch/geodynamics/ampuero/software.html
-  + MDSBI, http://www.people.fas.harvard.edu/~edunham/codes/codes.html
-  + SEM2DPACK, http://www.sg.geophys.ethz.ch/geodynamics/ampuero/software.html
+  + MDSBI, https://pangea.stanford.edu/~edunham/codes/codes.html
+  + SEM2DPACK, https://github.com/jpampuero/sem2dpack
 
 
 III. PRE-REQUISITES
@@ -94,7 +87,9 @@ In particular you should pay attention to the grid spacing required to
 achieve adequate numerical resolution of the rupture process zone, otherwise
 you will obtain numerical noise, notably in the slip rate histories.
 SBIEMLAB gives limited warning about numerical resolution. You are responsible
-of setting the grid spacing according to the usual criteria (e.g. reference above).
+for setting the grid spacing according to the usual criterion: several grid points
+within the process zone size, defined as the zone between the rupture front
+and the end of weakening where slip = Dc (e.g. see reference above).
 
 The SBIEM implemented here assumes periodicity along the fault, beyond the
 limits of the modelled fault segment. Stresses propagating at the S wave speed 
