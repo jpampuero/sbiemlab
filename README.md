@@ -1,6 +1,6 @@
-SBIEMLAB
-a Spectral Boundary Integral Equation Method 
-for 2D mode III rupture dynamics in Matlab
+# SBIEMLAB
+
+## A Spectral Boundary Integral Equation Method for 2D mode III rupture dynamics in Matlab
 
 Version 0.1
 
@@ -18,13 +18,13 @@ CONTENTS
 I. DIRECTORY CONTENTS
 ----------------------
 
-. README		the current file
-. GNU_GPL		GNU General Public License
-. SBIEM*jpg	example output figures
-. src/SBIEM.m	the SBIEM solver
-. src/friction.m	slip weakening friction laws
-. src/SBIEM_ex*.m	examples (1 to 3)
-. src/speed.m	estimates front speed
+* README : the current file
+* GNU_GPL : GNU General Public License
+* SBIEM*jpg : example output figures
+* src/SBIEM.m : the SBIEM solver
+* src/friction.m : slip weakening friction laws
+* src/SBIEM_ex*.m : examples (1 to 3)
+* src/speed.m : estimates front speed
 
 The function SBIEM creates and maintains a directory called 'kernels', 
 in which some numerical coefficient tables are stored to avoid 
@@ -118,7 +118,7 @@ input and output arguments.
 V. QUESTIONS AND BUG REPORTS
 -----------------------------
 
-For any problem running SBIEMLAB contact the author:
+For any problem running SBIEMLAB, submit an "issue" on github (preferred way) or contact the author:
 
 Jean-Paul Ampuero
 ampuero@geoazur.unice.fr
